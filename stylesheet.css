@@ -14,18 +14,18 @@ aside{
     background-color: lightgrey;
 
 }
-form{
+section{
     grid-row:2/4;
     background-color: beige;
     padding:45px;
     text-align:center;
 }
-input[type=text] {
+textarea {
     width: 85%;
     height: 85%;
     margin: 10px;
     border-radius:20px;
-    padding: 100px 20px;
+    padding: 20px 20px;
     resize:none;
   }
 
@@ -40,7 +40,7 @@ footer{
 .save_button{
     background-color:green;
     border-radius: 20px;
-    padding:20px;
+    padding: 20px;
     color: white;
     margin: 10px
 
