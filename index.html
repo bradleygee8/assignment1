@@ -10,20 +10,19 @@
 
 <body >
 <aside>
-    <ul>My Notes
+    <ul><h2>My Notes</h2>
         <li><a href="note_one.html">note one</a></li>
         <li><a href="note_two.html">note two</a></li>
     </ul>
 </aside>
-<form action="/action_page.php">
+<section>
     <button type= "button" onclick="alert('You have a new note')"class="note_button"> New Note</button>
     <button type= "button" onclick="alert('You are in Dark Theme')"class="dark_button">Dark Mode</button>
-    <label for="note"></label>
-    <input type="text" id="note" name="note"><br>
+    <textarea id = "myTextArea" rows = "10" cols = "80">This is a placeholder</textarea><br>
     <button type= "button" onclick="alert('You have saved this document')"class="save_button">
     Save</button>
     <button type= "button" onclick="alert('you have canceled the document')" class="cancel_button">Cancel</button>
-  </form>
+    </section>
 </body>
 <footer>
     <h2>Keep in Touch</h2>
