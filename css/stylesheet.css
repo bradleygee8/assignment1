@@ -4,15 +4,17 @@ header{
     grid-column: 1/3;
     
 }
-body{ 
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-gap:20px;
-}
-aside{
-    grid-row: 2/4;
-    background-color: lightgrey;
 
+aside{
+    grid-row: 4/4;
+    background-color: lightgrey;
+    
+
+}
+
+ul{
+    list-style-type: none;
+    display:block;
 }
 section{
     grid-row:2/4;
@@ -22,40 +24,43 @@ section{
 }
 textarea {
     width: 85%;
-    height: 85%;
+    height: 50%;
     margin: 10px;
     border-radius:20px;
     padding: 20px 20px;
     resize:none;
   }
 
+body{ 
+    display: grid;
+    grid-gap:0px;
+}
 
 footer{
+    background-color: pink;
     text-align:center;
     font-size: 20px;
-    background-color: pink;
     grid-column:1/3
 
 }
 .save_button{
     background-color:green;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     color: white;
-    margin: 10px
 
 }
 .cancel_button{
     background-color:red;
     border-radius: 20px;
-    padding:20px;
+    padding:10px;
     color: white;
 
 }
 .note_button{
     background-color:green;
     border-radius: 20px;
-    padding:20px;
+    padding:10px;
     color: white;
     float:left
 
@@ -63,7 +68,7 @@ footer{
 .dark_button{
     background-color:grey;
     border-radius: 20px;
-    padding:20px;
+    padding:10px;
     color: white;
     float: right;
 }
@@ -72,3 +77,18 @@ img{
     width:70px;
     padding:10px
 }
+
+@media screen and (min-width: 480px) {
+    body{
+
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 20px;
+    }
+    aside{
+        grid-row: 2/4;
+    }
+    .save_button, .cancel_button, .note_button, .dark_button{
+        padding:20px;
+        margin: 10px
+    }
+    }
