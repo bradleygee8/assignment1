@@ -7,7 +7,6 @@ const section = document.querySelector('section')
 const aside = document.querySelector('aside')
 const body = document.querySelector('body')
 const textarea= document.querySelector('textarea')
-var notelist = [ {title: "note one", body:"some text 1"}, {title:"note two", body:"some text 2"}];
 const li = document.querySelectorAll('li');
 
 
@@ -61,23 +60,18 @@ function newNote(){
 function savenote(){
     const text = document.getElementById('myTextArea').value
     var lines = text.split('.');
-    var string = ""
-    for (i = 1; i < lines.length ; i++){
-        string += String(lines[i]) +"."
-    }
     var firstline = lines.shift()
-    notelist.push({title: firstline, body: string});
     var button = document.createElement("Button")
     button.value = text
     button.style.display ="block"
     button.appendChild(document.createTextNode(firstline));
-    button.addEventListener("click",function() {go(button.value)});
-    document.querySelector('ul').appendChild(button);
+    button.addEventListener("click",function() {display_value(button.value)});
+    document.querySelector('li').appendChild(button);
 
 }
 
 
-function go(button_value){
+function display_value(button_value){
     document.getElementById("myTextArea").value = button_value;
 }
 
