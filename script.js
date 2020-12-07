@@ -15,6 +15,7 @@ function theme(){
     if(darkmode.style.backgroundColor != "blue"){
         newnote.style.backgroundColor = "purple";
         darkmode.style.backgroundColor = "blue";
+        darkmode.innerHTML='Light Mode';
         cancel.style.backgroundColor = "brown";
         save.style.backgroundColor = "black";
         head.style.backgroundColor = "black";
@@ -24,8 +25,11 @@ function theme(){
         aside.style.color = "white";
         document.querySelector('footer').style.backgroundColor = 'grey'
         document.body.style.backgroundColor = 'brown'
+        textarea.style.backgroundColor = "darkblue"
+        textarea.style.color = "white"
         }
     else {
+        darkmode.innerHTML='Dark Mode';
         darkmode.style.backgroundColor = "grey";
         newnote.style.backgroundColor = "green";
         cancel.style.backgroundColor = "red";
@@ -37,6 +41,8 @@ function theme(){
         aside.style.color = "black";
         document.querySelector('footer').style.backgroundColor = "pink";
         document.body.style.backgroundColor = 'white'
+        textarea.style.backgroundColor = "white"
+        textarea.style.color = "black"
     }
 }
 
